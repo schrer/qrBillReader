@@ -7,6 +7,13 @@ export class QrParserResult{
     parsedContent;
 }
 
+const R1TaxRates = {
+    Rate20: 20,
+    Rate19: 19,
+    Rate13: 13,
+    Rate0: 0
+}
+
 export function parse(qrContent) {
     let result = new QrParserResult();
     result.parsed = false;
@@ -68,19 +75,19 @@ function getR1amounts(fields){
     let amount19p = stringToFloat(fields[8]);
 
     if (amount20p) {
-        amounts.push(new Amount(amount20p, 20, "EUR"))
+        amounts.push(new Amount(amount20p, R1TaxRates.Rate20, "EUR"))
     }
     if (amount10p) {
-        amounts.push(new Amount(amount10p, 10, "EUR"))
+        amounts.push(new Amount(amount10p, R1TaxRates.Rate10, "EUR"))
     }
     if (amount13p) {
-        amounts.push(new Amount(amount13p, 13, "EUR"))
+        amounts.push(new Amount(amount13p, R1TaxRates.Rate13, "EUR"))
     }
     if (amount0p) {
-        amounts.push(new Amount(amount0p, 0, "EUR"))
+        amounts.push(new Amount(amount0p, R1TaxRates.Rate0, "EUR"))
     }
     if (amount19p) {
-        amounts.push(new Amount(amount19p, 19, "EUR"))
+        amounts.push(new Amount(amount19p, R1TaxRates.Rate19, "EUR"))
     }
 }
 
