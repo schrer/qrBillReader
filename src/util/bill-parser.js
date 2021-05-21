@@ -11,6 +11,7 @@ const R1TaxRates = {
     Rate20: 20,
     Rate19: 19,
     Rate13: 13,
+    Rate10: 10,
     Rate0: 0
 }
 
