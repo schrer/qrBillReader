@@ -41,8 +41,8 @@ function parseAlgoR1(content){
     let r1Result = new R1BillContent();
 
     r1Result.algorithm = "R1";
-    r1Result.supplierR1 = new R1TrustedSupplier(fields[0].substring(3))
-    r1Result.registerNumberR1 = fields[1]
+    r1Result.supplierR1 = new R1TrustedSupplier(fields[0].substring(3));
+    r1Result.registerNumberR1 = fields[1];
     r1Result.billNumber = fields[2];
     r1Result.date = moment(fields[3], r1DateFormat, true);
     r1Result.amounts = getR1amounts(fields);
@@ -76,19 +76,19 @@ function getR1amounts(fields){
     let amount19p = stringToFloat(fields[8]);
 
     if (amount20p) {
-        amounts.push(new Amount(amount20p, R1TaxRates.Rate20, "EUR"))
+        amounts.push(new Amount(amount20p, R1TaxRates.Rate20, "EUR"));
     }
     if (amount10p) {
-        amounts.push(new Amount(amount10p, R1TaxRates.Rate10, "EUR"))
+        amounts.push(new Amount(amount10p, R1TaxRates.Rate10, "EUR"));
     }
     if (amount13p) {
-        amounts.push(new Amount(amount13p, R1TaxRates.Rate13, "EUR"))
+        amounts.push(new Amount(amount13p, R1TaxRates.Rate13, "EUR"));
     }
     if (amount0p) {
-        amounts.push(new Amount(amount0p, R1TaxRates.Rate0, "EUR"))
+        amounts.push(new Amount(amount0p, R1TaxRates.Rate0, "EUR"));
     }
     if (amount19p) {
-        amounts.push(new Amount(amount19p, R1TaxRates.Rate19, "EUR"))
+        amounts.push(new Amount(amount19p, R1TaxRates.Rate19, "EUR"));
     }
 }
 
