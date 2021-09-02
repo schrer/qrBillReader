@@ -57,7 +57,7 @@ function parseAlgoR1(content){
 function checkAlgoR1(content){
     let fields = splitR1String(content);
 
-    if (fields.length != 13){
+    if (fields.length !== 13){
         return false;
     }
 
