@@ -1,15 +1,10 @@
 import React from 'react';
 import {
-  CButton,
   CCol,
   CContainer,
-  CFormControl,
-  CInputGroup,
-  CInputGroupText,
   CRow,
 } from '@coreui/react';
-import CIcon from '@coreui/icons-react';
-import { cilMagnifyingGlass } from '@coreui/icons';
+
 
 const Page404 = () => {
   return (
