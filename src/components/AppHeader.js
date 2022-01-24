@@ -10,15 +10,14 @@ import {
   CNavItem,
 } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
+import { cilBell, cilList, cilEnvelopeOpen } from '@coreui/icons';
 
 const AppHeader = () => {
 
   return (
     <CHeader position="sticky" className="mb-4">
       <CContainer fluid>
-        <CHeaderBrand className="mx-auto d-md-none" to="/">
-          <CIcon name="logo" height="48" alt="Logo" />
-        </CHeaderBrand>
+        <CHeaderBrand className="mx-auto d-md-none" to="/">Header</CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
             <CNavLink to="/dashboard" component={NavLink} activeClassName="active">
@@ -35,17 +34,17 @@ const AppHeader = () => {
         <CHeaderNav>
           <CNavItem>
             <CNavLink href="#">
-              <CIcon name="cil-bell" size="lg" />
+              <CIcon icon={cilBell} size="lg" />
             </CNavLink>
           </CNavItem>
           <CNavItem>
             <CNavLink href="#">
-              <CIcon name="cil-list" size="lg" />
+              <CIcon icon={cilList} size="lg" />
             </CNavLink>
           </CNavItem>
           <CNavItem>
             <CNavLink href="#">
-              <CIcon name="cil-envelope-open" size="lg" />
+              <CIcon icon={cilEnvelopeOpen} size="lg" />
             </CNavLink>
           </CNavItem>
         </CHeaderNav>

@@ -9,6 +9,7 @@ import {
   CRow,
 } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
+import { cilMagnifyingGlass } from '@coreui/icons';
 
 const Page404 = () => {
   return (
@@ -23,13 +24,6 @@ const Page404 = () => {
                 The page you are looking for was not found.
               </p>
             </div>
-            <CInputGroup className="input-prepend">
-              <CInputGroupText>
-                <CIcon name="cil-magnifying-glass" />
-              </CInputGroupText>
-              <CFormControl size="16" type="text" placeholder="What are you looking for?" />
-              <CButton color="info">Search</CButton>
-            </CInputGroup>
           </CCol>
         </CRow>
       </CContainer>
