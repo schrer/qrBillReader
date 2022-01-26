@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+![Build and Testing](https://github.com/schrer/qrBillReader/actions/workflows/testing.yml/badge.svg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
