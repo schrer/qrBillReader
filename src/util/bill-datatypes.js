@@ -1,8 +1,19 @@
+import moment from "moment";
+
 export class BillContent {
+    id;
     algorithm;
     amounts;
     billNumber;
-    date;
+    dateMs;
+
+    get date() {
+        return moment(this.dateMs);
+    }
+
+    set date(value) {
+        this.dateMs = value.valueOf()
+    }
 }
 
 export class R1BillContent extends BillContent {
@@ -47,17 +58,13 @@ export class R1TrustedSupplier {
     }
 
     get name(){
-        switch(this.short){
-            case "AT0":
+        switch(this.short.toLowerCase()){
             case "at0":
                 return "Geschlossenes Gesamtsystem - AT0";
-            case "AT1":
             case "at1":
                 return "A-Trust";
-            case "AT2":
             case "at2":
                 return "e-commerce monitoring";
-            case "AT3":
             case "at3":
                 return "PrimeSign";
             default:

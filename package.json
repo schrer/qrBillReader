@@ -18,13 +18,15 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "5.2.0",
     "react-scripts": "^5.0.0",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "dexie": "^3.2.0",
+    "dexie-react-hooks": "^1.1.1"
   },
   "devDependencies": {
     "sass": "^1.49.0"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "BROWSER=google-chrome react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
