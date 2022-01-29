@@ -1,5 +1,5 @@
 import './scss/style.scss';
-import React, { Component } from 'react';
+import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -16,10 +16,9 @@ const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
 // pages
 const Page404 = React.lazy(() => import('./views/pages/page404'))
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
+export default function App() {
+  return (
+    <Provider store={store}>
         <HashRouter>
           <React.Suspense fallback={loading}>
             <Switch>
@@ -29,8 +28,5 @@ class App extends Component {
           </React.Suspense>
         </HashRouter>
       </Provider>
-    );
-  }
+  );
 }
-
-export default App;
