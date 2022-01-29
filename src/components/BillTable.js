@@ -4,14 +4,14 @@ import { useTranslation } from 'react-i18next';
 
 const BillTable = () => {
 
-  const {t, i18n} = useTranslation();
+  const translate = useTranslation().t;
 
   return (
     <CTable>
         <CTableBody>
             <CTableRow>
-                <CTableHeaderCell scope="row">{t('bill.tableheader.label')}</CTableHeaderCell>
-                <CTableDataCell>{t('bill.tableheader.value')}</CTableDataCell>
+                <CTableHeaderCell scope="row">{translate('bill.tableheader.label')}</CTableHeaderCell>
+                <CTableDataCell>{translate('bill.tableheader.value')}</CTableDataCell>
             </CTableRow>
         </CTableBody>
     </CTable>
