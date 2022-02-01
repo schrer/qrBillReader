@@ -1,15 +1,13 @@
 import React from 'react';
 import { CAccordion, CAccordionItem, CAccordionHeader, CAccordionBody } from '@coreui/react';
 import BillTable from './BillTable';
-import { db } from '../util/storage';
+import { readR1Bills } from '../util/storage';
 import {useLiveQuery} from 'dexie-react-hooks';
 
 
 const BillsAccordion = () => {
 
-  const qrBills = useLiveQuery( async () => {
-    return await db.r1Bills.toArray();
-  })
+  const qrBills = useLiveQuery( readR1Bills )
   return (
     <CAccordion activeItemKey={1}>
 
@@ -20,7 +18,7 @@ const BillsAccordion = () => {
               {bill.billNumber}
             </CAccordionHeader>
             <CAccordionBody>
-              <BillTable/>
+              <BillTable bill={bill}/>
             </CAccordionBody>
           </CAccordionItem>
         )

@@ -1,8 +1,18 @@
 {
     "bill": {
-      "tableheader": {
+      "table": {
         "label":"Name",
-        "value":"Wert"
+        "value":"Wert",
+        "billNumber":"Rechnugsnummer",
+        "date":"Datum",
+        "grossamount":{
+            "20percent":"Brutto USt. 20%",
+            "19percent":"Brutto USt. 19%",
+            "13percent":"Brutto USt. 13%",
+            "10percent":"Brutto USt. 10%",
+            "0percent":"Brutto USt. 0%",
+            "full":"Bruttopreis"
+        }
       }
     }
   }

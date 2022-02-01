@@ -1,6 +1,6 @@
 import QrReader from 'react-qr-reader';
 import {parse} from '../util/bill-parser'; 
-import { db } from '../util/storage';
+import { saveR1Bill } from '../util/storage';
 
 
 export default function QrReaderComponent() {
@@ -22,7 +22,7 @@ export default function QrReaderComponent() {
   async function addQrBill (qrBill) {
     try {
       qrBill.date = qrBill.date.valueOf()
-      const id = await db.r1Bills.add(qrBill);
+      const id = await saveR1Bill(qrBill);
 
       console.log(`Added bill ${qrBill.billNumber} with id ${id}`);
     } catch (error) {
@@ -41,46 +41,3 @@ export default function QrReaderComponent() {
   </>
 
 }
-
-/*
-
-export default class QrReaderComponent extends Component {
-
-  handleScan = data => {
-    if (data) {
-      let parsedObject = parse(data);
-      if (parsedObject.parsed) {
-        addQrBill(parsedObject.parsedContent);
-      }
-    }
-  }
-
-  handleError = err => {
-    console.error(err);
-  }
-
-  get billNumber(){
-    let parsed = parse(this.state.result);
-    if (parsed.parsed) {
-      return parsed.parsedContent.billNumber;
-    }
-    return parsed.rawContent;
-  }
-
-
-
-  render() {
-    return (
-      <div>
-        <QrReader
-          delay={200}
-          onError={this.handleError}
-          onScan={this.handleScan}
-        />
-        <p>{this.billNumber}</p>
-      </div>
-    )
-  }
-}
-
-*/

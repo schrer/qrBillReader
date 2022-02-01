@@ -27,6 +27,16 @@ export class R1BillContent extends BillContent {
     get isCancellationReceiptR1(){
         return "U1RP".equalsIgnoreCase(this.encryptedRevenueCounter);
     }
+
+    get grossAmount() {
+        const sumReducer = (previous, current) => previous + current;
+        if (!this.amounts) {
+            return 0;
+        }
+        return this.amounts
+            .map(amount => amount ? amount.fullAmount : 0)
+            .reduce(sumReducer);
+    }
 }
 
 export class Amount {

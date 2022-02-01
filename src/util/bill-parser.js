@@ -7,7 +7,7 @@ export class QrParserResult{
     parsedContent;
 }
 
-const R1TaxRates = {
+export const R1TaxRates = {
     Rate20: 20,
     Rate19: 19,
     Rate13: 13,
@@ -90,6 +90,7 @@ function getR1amounts(fields){
     if (amount19p) {
         amounts.push(new Amount(amount19p, R1TaxRates.Rate19, "EUR"));
     }
+    return amounts;
 }
 
 function splitR1String(r1String) {
