@@ -34,7 +34,8 @@ export function parse(qrContent) {
 
 function parseAlgoR1(content){
     // https://de.wikipedia.org/wiki/Registrierkassensicherheitsverordnung
-    const r1DateFormat = "YYYY-MM-DDThh:mm:ss";
+    // moment.js uses kk instead of hh for 24 hour formatting
+    const r1DateFormat = 'YYYY-MM-DDTkk:mm:ss';
 
     let fields = splitR1String(content);
 

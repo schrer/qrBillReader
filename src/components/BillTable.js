@@ -24,7 +24,7 @@ const BillTable = (props) => {
                 </CTableRow>
                 <CTableRow>
                     <CTableHeaderCell scope="row">{translate('bill.table.date')}</CTableHeaderCell>
-                    <CTableDataCell>{bill.date.format('DD.MM.YYYY, hh:mm:ss')}</CTableDataCell>
+                    <CTableDataCell>{bill.date.format('DD.MM.YYYY, kk:mm:ss')}</CTableDataCell>
                 </CTableRow>
                 <CTableRow>
                     <CTableHeaderCell scope="row">{translate('bill.table.grossamount.full')}</CTableHeaderCell>
