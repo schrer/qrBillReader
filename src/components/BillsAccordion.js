@@ -13,7 +13,7 @@ const BillsAccordion = () => {
 
       {
         qrBills?.map( bill =>
-          <CAccordionItem itemKey={bill.id}>
+          <CAccordionItem itemKey={bill.id} key={bill.id}>
             <CAccordionHeader>
               {bill.billNumber}
             </CAccordionHeader>
