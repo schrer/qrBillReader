@@ -1,4 +1,4 @@
-name: Integration Testing
+name: Build, Integration Testing, Artifact upload
 
 # Controls when the workflow will run
 on:
