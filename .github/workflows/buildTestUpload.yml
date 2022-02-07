@@ -31,5 +31,12 @@ jobs:
         run: npm install
       - name: Build project
         run: npm run build
+
       - name: Run tests
         run: npm run test
+
+      - name: Upload page build as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: page-build
+          path: build/*
