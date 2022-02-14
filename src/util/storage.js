@@ -15,7 +15,7 @@ export async function saveR1Bill(r1Bill){
 }
 
 export async function readR1Bills(){
-    return await db.r1Bills.toArray()
+    return await db.r1Bills.reverse().toArray()
         .then(result => {
             result.forEach( bill => {
                 bill.amounts = bulkConvertDbAmountToAmountInstance(bill.amounts);
