@@ -32,7 +32,7 @@ const BillTable = (props) => {
                         </CTableRow>
                         <CTableRow>
                             <CTableHeaderCell scope="row">{translate('bill.table.grossamount.full')}</CTableHeaderCell>
-                            <CTableDataCell>{bill.grossAmount ? (bill.grossAmount * 1).toFixed(2) : 0}</CTableDataCell>
+                            <CTableDataCell>{bill.grossAmount ? Number(bill.grossAmount).toFixed(2) : 0}</CTableDataCell>
                         </CTableRow>
                         {gross20p > 0 &&
                             <CTableRow>
