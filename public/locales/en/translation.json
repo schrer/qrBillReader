@@ -1,18 +1,24 @@
 {
-"bill": {
-    "table": {
-    "label":"Name",
-    "value":"Value",
-    "billNumber":"Invoice number",
-    "date":"Date",
-    "grossamount":{
-        "20percent":"Gross VAT 20%",
-        "19percent":"Gross VAT 19%",
-        "13percent":"Gross VAT 13%",
-        "10percent":"Gross VAT 10%",
-        "0percent":"Gross VAT 0%",
-        "full":"Gross price"
+    "bill": {
+        "table": {
+            "label": "Name",
+            "value": "Value",
+            "billNumber": "Invoice number",
+            "date": "Date",
+            "grossamount": {
+                "20percent": "Gross VAT 20%",
+                "19percent": "Gross VAT 19%",
+                "13percent": "Gross VAT 13%",
+                "10percent": "Gross VAT 10%",
+                "0percent": "Gross VAT 0%",
+                "full": "Gross price"
+            }
+        },
+        "delete": {
+            "buttonText": "Delete",
+            "modalTitle": "Do you want to delete this bill?",
+            "modalCancel": "Cancel",
+            "modalOk": "Delete"
+        }
     }
-    }
-}
 }

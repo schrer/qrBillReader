@@ -1,18 +1,24 @@
 {
     "bill": {
-      "table": {
-        "label":"Name",
-        "value":"Wert",
-        "billNumber":"Rechnugsnummer",
-        "date":"Datum",
-        "grossamount":{
-            "20percent":"Brutto USt. 20%",
-            "19percent":"Brutto USt. 19%",
-            "13percent":"Brutto USt. 13%",
-            "10percent":"Brutto USt. 10%",
-            "0percent":"Brutto USt. 0%",
-            "full":"Bruttopreis"
+        "table": {
+            "label": "Name",
+            "value": "Wert",
+            "billNumber": "Rechnugsnummer",
+            "date": "Datum",
+            "grossamount": {
+                "20percent": "Brutto USt. 20%",
+                "19percent": "Brutto USt. 19%",
+                "13percent": "Brutto USt. 13%",
+                "10percent": "Brutto USt. 10%",
+                "0percent": "Brutto USt. 0%",
+                "full": "Bruttopreis"
+            }
+        },
+        "delete": {
+            "buttonText": "Löschen",
+            "modalTitle": "Soll diese Rechnung gelöscht werden?",
+            "modalCancel": "Abbrechen",
+            "modalOk": "Löschen"
         }
-      }
     }
-  }
+}
