@@ -35,7 +35,7 @@ export class R1BillContent extends BillContent {
         }
         return this.amounts
             .map(amount => amount ? amount.fullAmount : 0)
-            .reduce(sumReducer);
+            .reduce(sumReducer).toFixed(2);
     }
 }
 
@@ -52,7 +52,7 @@ export class Amount {
 
     get netAmount(){
         let taxDivisor = (100 + this.taxPercentage)/100
-        return this.fullAmount / taxDivisor;
+        return (this.fullAmount / taxDivisor).toFixed(2);
     }
 
     get taxAmount(){
