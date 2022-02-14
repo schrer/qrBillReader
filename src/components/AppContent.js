@@ -8,10 +8,10 @@ const AppContent = () => {
     <CContainer lg>
       <Suspense fallback={<CSpinner color="primary" />}>
         <CRow>
-          <CCol xs={12}>
+          <CCol xs={12} xl={6}>
             <QrReaderComponent/>
           </CCol>
-          <CCol xs={12}>
+          <CCol xs={12} xl={6}>
             <BillsAccordion/>
           </CCol>
         </CRow>
