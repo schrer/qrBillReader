@@ -38,11 +38,11 @@ const DeleteSingleBillCollapsible = (props) => {
                     {deleteButtonText}
                 </CButton>
             </CRow>
-            <CRow>
+            <CRow className="m-3">
                 <CCollapse visible={visible}>
-                    <CContainer>
-                        <CRow>{translate('bill.delete.confirmationText')}</CRow>
-                        <CRow>
+                    <CContainer >
+                        <CRow className="justify-content-center">{translate('bill.delete.confirmationText')}</CRow>
+                        <CRow className="justify-content-center">
                             <CButton color="danger" onClick={() => deleteQrBill(bill)}>
                                 {translate('bill.delete.buttonDelete')}
                             </CButton>
