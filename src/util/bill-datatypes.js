@@ -29,13 +29,25 @@ export class R1BillContent extends BillContent {
     }
 
     get grossAmount() {
-        const sumReducer = (previous, current) => previous + current;
         if (!this.amounts) {
             return 0;
         }
+
+        const sumReducer = (previous, current) => previous + current;
         return this.amounts
             .map(amount => amount ? amount.fullAmount : 0)
             .reduce(sumReducer).toFixed(2);
+    }
+
+    get netAmount() {
+        if (!this.amounts) {
+            return 0;
+        }
+
+        const sumReducer = (previous, current) => previous + current;
+        return Number(this.amounts
+            .map(amount => amount ? Number(amount.netAmount) : 0)
+            .reduce(sumReducer)).toFixed(2);
     }
 }
 

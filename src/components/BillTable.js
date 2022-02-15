@@ -2,7 +2,7 @@ import React from 'react';
 import { CContainer, CRow, CTable, CTableBody, CTableDataCell, CTableHeaderCell, CTableRow } from '@coreui/react';
 import { useTranslation } from 'react-i18next';
 import { R1TaxRates } from '../util/bill-parser';
-import DeleteSingleBillModal from './DeleteSingleBillModal';
+import DeleteSingleBillCollapsible from './DeleteSingleBillCollapsible';
 
 
 const BillTable = (props) => {
@@ -64,11 +64,15 @@ const BillTable = (props) => {
                                 <CTableDataCell>{gross0p.toFixed(2)}</CTableDataCell>
                             </CTableRow>
                         }
+                        <CTableRow>
+                            <CTableHeaderCell scope="row">{translate('bill.table.netamount.full')}</CTableHeaderCell>
+                            <CTableDataCell>{Number(bill.netAmount).toFixed(2)}</CTableDataCell>
+                        </CTableRow>
                     </CTableBody>
                 </CTable>
             </CRow>
             <CRow>
-                <DeleteSingleBillModal bill={bill} />
+                <DeleteSingleBillCollapsible bill={bill} />
             </CRow>
         </CContainer>
 

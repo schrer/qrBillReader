@@ -12,13 +12,15 @@
                 "10percent": "Brutto USt. 10%",
                 "0percent": "Brutto USt. 0%",
                 "full": "Bruttopreis"
+            },
+            "netamount": {
+                "full": "Nettopreis"
             }
         },
         "delete": {
-            "buttonText": "Löschen",
-            "modalTitle": "Soll diese Rechnung gelöscht werden?",
-            "modalCancel": "Abbrechen",
-            "modalOk": "Löschen"
+            "buttonDelete": "Löschen",
+            "buttonCancel": "Abbrechen",
+            "confirmationText": "Soll diese Rechnung gelöscht werden?"
         }
     }
 }
