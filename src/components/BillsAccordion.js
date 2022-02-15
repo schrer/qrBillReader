@@ -9,12 +9,12 @@ const BillsAccordion = () => {
 
     const qrBills = useLiveQuery(readR1Bills)
     return (
-        <CAccordion activeItemKey={1}>
+        <CAccordion alwaysOpen activeItemKey={1}>
 
             {
                 qrBills?.map(bill =>
                     <CAccordionItem itemKey={bill.id} key={bill.id}>
-                        <CAccordionHeader>
+                        <CAccordionHeader className="overflow-auto">
                             {bill.billNumber}
                         </CAccordionHeader>
                         <CAccordionBody>

@@ -1,8 +1,9 @@
 import React from 'react';
-import { CContainer, CRow, CTable, CTableBody, CTableDataCell, CTableHeaderCell, CTableRow } from '@coreui/react';
+import { CContainer, CRow, CTable, CTableBody } from '@coreui/react';
 import { useTranslation } from 'react-i18next';
 import { R1TaxRates } from '../util/bill-parser';
 import DeleteSingleBillCollapsible from './DeleteSingleBillCollapsible';
+import BillTableRow from './BillTableRow';
 
 
 const BillTable = (props) => {
@@ -20,54 +21,27 @@ const BillTable = (props) => {
     return (        
         <CContainer>
             <CRow>
-                <CTable>
+                <CTable hover>
                     <CTableBody>
-                        <CTableRow>
-                            <CTableHeaderCell scope="row">{translate('bill.table.billNumber')}</CTableHeaderCell>
-                            <CTableDataCell>{bill.billNumber}</CTableDataCell>
-                        </CTableRow>
-                        <CTableRow>
-                            <CTableHeaderCell scope="row">{translate('bill.table.date')}</CTableHeaderCell>
-                            <CTableDataCell>{bill.date.format('DD.MM.YYYY, kk:mm:ss')}</CTableDataCell>
-                        </CTableRow>
-                        <CTableRow>
-                            <CTableHeaderCell scope="row">{translate('bill.table.grossamount.full')}</CTableHeaderCell>
-                            <CTableDataCell>{bill.grossAmount ? Number(bill.grossAmount).toFixed(2) : 0}</CTableDataCell>
-                        </CTableRow>
+                        <BillTableRow title={translate('bill.table.billNumber')} content={bill.billNumber}/>
+                        <BillTableRow title={translate('bill.table.date')} content={bill.date.format('DD.MM.YYYY, kk:mm:ss')}/>
+                        <BillTableRow title={translate('bill.table.grossamount.full')} content={bill.grossAmount ? Number(bill.grossAmount).toFixed(2) : 0}/>
                         {gross20p > 0 &&
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">{translate('bill.table.grossamount.20percent')}</CTableHeaderCell>
-                                <CTableDataCell>{gross20p.toFixed(2)}</CTableDataCell>
-                            </CTableRow>
+                            <BillTableRow title={translate('bill.table.grossamount.20percent')} content={gross20p.toFixed(2)}/>
                         }
                         {gross10p > 0 &&
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">{translate('bill.table.grossamount.10percent')}</CTableHeaderCell>
-                                <CTableDataCell>{gross10p.toFixed(2)}</CTableDataCell>
-                            </CTableRow>
+                            <BillTableRow title={translate('bill.table.grossamount.10percent')} content={gross10p.toFixed(2)}/>
                         }
                         {gross19p > 0 &&
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">{translate('bill.table.grossamount.19percent')}</CTableHeaderCell>
-                                <CTableDataCell>{gross19p.toFixed(2)}</CTableDataCell>
-                            </CTableRow>
+                            <BillTableRow title={translate('bill.table.grossamount.19percent')} content={gross19p.toFixed(2)}/>
                         }
                         {gross13p > 0 &&
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">{translate('bill.table.grossamount.13percent')}</CTableHeaderCell>
-                                <CTableDataCell>{gross13p.toFixed(2)}</CTableDataCell>
-                            </CTableRow>
+                            <BillTableRow title={translate('bill.table.grossamount.13percent')} content={gross13p.toFixed(2)}/>
                         }
                         {gross0p > 0 &&
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">{translate('bill.table.grossamount.0percent')}</CTableHeaderCell>
-                                <CTableDataCell>{gross0p.toFixed(2)}</CTableDataCell>
-                            </CTableRow>
+                            <BillTableRow title={translate('bill.table.grossamount.0percent')} content={gross0p.toFixed(2)}/>
                         }
-                        <CTableRow>
-                            <CTableHeaderCell scope="row">{translate('bill.table.netamount.full')}</CTableHeaderCell>
-                            <CTableDataCell>{Number(bill.netAmount).toFixed(2)}</CTableDataCell>
-                        </CTableRow>
+                        <BillTableRow title={translate('bill.table.netamount.full')} content={Number(bill.netAmount).toFixed(2)}/>
                     </CTableBody>
                 </CTable>
             </CRow>
