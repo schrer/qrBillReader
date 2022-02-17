@@ -7,7 +7,7 @@ const BillTableRow = (props) => {
         <CTableRow onClick={() => {navigator.clipboard.writeText(props.content)}}>
             <CTableHeaderCell scope="row">{props.title}</CTableHeaderCell>
             <CTableDataCell className="d-flex">
-                <div class="overflow-hidden">{props.content}</div>
+                <div className="overflow-hidden">{props.content}</div>
                 <CIcon className="ms-auto" icon={icon.cilClipboard}/>
             </CTableDataCell>
         </CTableRow>

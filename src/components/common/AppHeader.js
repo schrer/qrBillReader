@@ -12,8 +12,7 @@ import { useTranslation } from 'react-i18next';
 import DeleteAllBillsModal from '../billspage/DeleteAllBillsModal';
 
 
-const AppHeader = () => {
-
+const AppHeader = (props) => {
     const translate = useTranslation().t;
 
     return (
@@ -33,9 +32,11 @@ const AppHeader = () => {
                     </CNavItem>
                 </CHeaderNav>
                 <CHeaderNav>
-                    <CNavItem>
-                        <DeleteAllBillsModal />
-                    </CNavItem>
+                    { props.showDeleteAll &&
+                        <CNavItem>
+                            <DeleteAllBillsModal />
+                        </CNavItem>
+                    }
                 </CHeaderNav>
             </CContainer>
         </CHeader>
