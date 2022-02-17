@@ -1,4 +1,11 @@
 {
+    "header": {
+        "home":"Home",
+        "about":"Über diese Seite"
+    },
+    "footer": {
+        "imprint":"Impressum"
+    },
     "bill": {
         "table": {
             "label": "Name",
