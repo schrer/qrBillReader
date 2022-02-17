@@ -32,7 +32,7 @@ const DeleteAllBillsModal = () => {
                     <CModalTitle>{translate('clearAll.modalTitle')}</CModalTitle>
                 </CModalHeader>
                 <CModalBody>
-                    {translate('clearAll.modalTitle')}
+                    {translate('clearAll.modalBody')}
                 </CModalBody>
                 <CModalFooter>
                     <CButton color="secondary" onClick={() => setVisible(false)}>
