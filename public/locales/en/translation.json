@@ -6,6 +6,9 @@
     "footer": {
         "imprint":"Imprint"
     },
+    "clearAll":{
+        "button":"Delete all"
+    },
     "bill": {
         "table": {
             "label": "Name",
