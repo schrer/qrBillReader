@@ -1,7 +1,7 @@
 import React from 'react';
 import { CAccordion, CAccordionItem, CAccordionHeader, CAccordionBody } from '@coreui/react';
 import BillTable from './BillTable';
-import { readR1Bills } from '../util/storage';
+import { readR1Bills } from '../../util/storage';
 import { useLiveQuery } from 'dexie-react-hooks';
 import DeleteSingleBillCollapsible from './DeleteSingleBillCollapsible';
 

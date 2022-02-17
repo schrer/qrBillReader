@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import { CCol, CContainer, CRow, CSpinner } from '@coreui/react';
-import QrReaderComponent from './QrReader';
-import BillsAccordion from './BillsAccordion';
+import QrReaderComponent from './billspage/QrReader';
+import BillsAccordion from './billspage/BillsAccordion';
 
-const AppContent = () => {
+const BillReaderContent = () => {
   return (
     <CContainer lg>
       <Suspense fallback={<CSpinner color="primary" />}>
@@ -20,4 +20,4 @@ const AppContent = () => {
   )
 }
 
-export default React.memo(AppContent)
+export default React.memo(BillReaderContent)

@@ -1,5 +1,5 @@
-import AppContent from './AppContent';
-import AppFooter from './AppFooter';
-import AppHeader from './AppHeader';
+import BillReaderContent from './BillReaderContent';
+import AppFooter from './common/AppFooter';
+import AppHeader from './common/AppHeader';
 
-export { AppContent, AppFooter, AppHeader };
+export { BillReaderContent, AppFooter, AppHeader };

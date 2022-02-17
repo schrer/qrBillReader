@@ -1,6 +1,6 @@
 import QrReader from 'react-qr-reader';
-import {parse} from '../util/bill-parser'; 
-import { saveR1Bill } from '../util/storage';
+import {parse} from '../../util/bill-parser'; 
+import { saveR1Bill } from '../../util/storage';
 
 
 export default function QrReaderComponent() {

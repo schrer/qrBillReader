@@ -1,7 +1,7 @@
 import { CButton, CCollapse, CContainer, CRow } from "@coreui/react";
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-import { deleteR1Bill } from '../util/storage';
+import { deleteR1Bill } from '../../util/storage';
 
 async function deleteQrBill(qrBill) {
     await deleteR1Bill(qrBill.id)

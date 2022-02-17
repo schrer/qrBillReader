@@ -1,7 +1,7 @@
 import React from 'react';
 import { CContainer, CRow, CTable, CTableBody } from '@coreui/react';
 import { useTranslation } from 'react-i18next';
-import { R1TaxRates } from '../util/bill-parser';
+import { R1TaxRates } from '../../util/bill-parser';
 import BillTableRow from './BillTableRow';
 
 
