@@ -1,7 +1,7 @@
 import React from 'react';
-import { BillReaderContent, AppFooter, AppHeader } from '../components';
+import { BillReaderContent, AppFooter, AppHeader } from '../../components';
 
-const DefaultLayout = () => {
+const PageBillReader = () => {
     return (
         <div className="wrapper d-flex flex-column min-vh-100 bg-light">
             <AppHeader />
@@ -13,4 +13,4 @@ const DefaultLayout = () => {
     )
 };
 
-export default DefaultLayout;
+export default PageBillReader;
