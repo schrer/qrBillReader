@@ -23,7 +23,7 @@ const DeleteAllBillsModal = () => {
 
     return (
         <>
-            <CButton color="dark" variant="outline" onClick={() => setVisible(true)}>
+            <CButton color="light" onClick={() => setVisible(true)}>
                 {translate('clearAll.button')}&nbsp;
                 <CIcon icon={cilTrash} size="lg" />
             </CButton>
@@ -32,7 +32,7 @@ const DeleteAllBillsModal = () => {
                     <CModalTitle>{translate('clearAll.modalTitle')}</CModalTitle>
                 </CModalHeader>
                 <CModalBody>
-                    {translate('clearAll.modalBody')}
+                    {translate('clearAll.modalTitle')}
                 </CModalBody>
                 <CModalFooter>
                     <CButton color="secondary" onClick={() => setVisible(false)}>

@@ -39,5 +39,38 @@
     },
     "imprint": {
         "full":"<h4>Impressum</h4><p><b>Informationen und Offenlegung gemäß &sect;5 (1) ECG, &sect; 25 MedienG, &sect; 63 GewO und &sect; 14 UGB</b></p> <p><b>Webseitenbetreiber:</b> Martin Schröder</p>\n<p><b>Anschrift:</b> Jagdgasse 9, 1100 Wien</p>\n<p><b>UID-Nr:</b> ATU76973036 <br> <b>Gewerbeaufsichtbehörde:</b> Magistratisches Bezirksamt des X. Bezirkes <br> <b>Mitgliedschaften:</b> Mitglied der WK Wien und Junge Wirtschaft</p>\n<p><b>Kontaktdaten:</b> <br> Telefon:  <br> Email: schroeder_martin@outlook.com <br> Fax: </p>\n\n<p><b>Anwendbare Rechtsvorschrift:</b> www.ris.bka.gv.at <br> <b>Berufsbezeichnung:</b> Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik</p>\n<p><b>Online Streitbeilegung:</b> Verbraucher, welche in Österreich oder in einem sonstigen Vertragsstaat der ODR-VO niedergelassen sind, haben die Möglichkeit Probleme bezüglich dem entgeltlichen Kauf von Waren oder Dienstleistungen im Rahmen einer Online-Streitbeilegung (nach OS, AStG) zu lösen. Die Europäische Kommission stellt eine Plattform hierfür bereit: https://ec.europa.eu/consumers/odr</p>\n<p><b>Urheberrecht:</b> Die Inhalte dieser Webseite unterliegen, soweit dies rechtlich möglich ist, diversen Schutzrechten (z.B dem Urheberrecht). Jegliche Verwendung/Verbreitung von bereitgestelltem Material, welche urheberrechtlich untersagt ist, bedarf schriftlicher Zustimmung des Webseitenbetreibers.</p><p><b>Haftungsausschluss:</b> Trotz sorgfältiger inhaltlicher Kontrolle übernimmt der Webseitenbetreiber dieser Webseite keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Sollten Sie dennoch auf ausgehende Links aufmerksam werden, welche auf eine Webseite mit rechtswidriger Tätigkeit/Information verweisen, ersuchen wir um dementsprechenden Hinweis, um diese nach § 17 Abs. 2 ECG umgehend zu entfernen.<br>Die Urheberrechte Dritter werden vom Betreiber dieser Webseite mit größter Sorgfalt beachtet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden derartiger Rechtsverletzungen werden wir den betroffenen Inhalt umgehend entfernen.</p>\n<p>Quelle: <b><a href='https://fairesRecht.at/spezialisierung/erbrecht/3/1'>fairesRecht</a></b></p>"
+    },
+    "about": {
+        "whatDoesItDo":{
+            "title":"What does this page do?",
+            "content":"With the austrian “Registrierkassensicherheitsverordnung“ machine readable codes on receipts have become mandatory. The code has to contain the receipt number, date and amounts due.\nIn many cases this code is printed on the receipt as a QR code. The site reads these QR codes and extract the values contained in it, so they can be easily copied and saved."
+        },
+        "whatCanItScan":{
+            "title":"Which QR codes can be read with this page?",
+            "content":"If a receipt from an austrian cash register contains a QR code, it can be assumed you can scan it with this page.\nSmall and big corporations and stores in Austria support this standard, for example: Hofer, Lidl, Media Markt, Müller, Billa and Billa Plus"
+        },
+        "howTo":{
+            "title":"How do I use this page?",
+            "content":"Place the QR code in front of your camera. Make sure to have good lighting. Especially low resolution notebook cameras can have issues reading the QR codes, because they tend to be printed rather small on the receipts.\nAs soon as the QR code was successfully scanned it will show up next to or below the camera view and can be opened with a click onto it. If a line should be copied to the clipboard, another click onto it is enough and the content of this line, be it the date, receipt number or the amount due, will be copied.\nDeleting a single receipt is possible in the detail view of the receipt. Deleting all receipts at once is also possible."
+        },
+        "storage":{
+            "title":"Will my receipts be stored? If so, where?",
+            "content":"The receipts are stored in your Browser. It is possible, that your browser or device routinely delete browser data.\nYou can also delete all or some of the receipts through the page directly.\nThe receipts never leave your device and won't be sent to the websites owner or others."
+        },
+        "privacy":{
+            "title":"Privacy",
+            "content":"There is no active trackign on this page. Google Analytics or similar products are not used on this page. That is why no cookie banner is displayed to accept tracking.\nThe only data saved is the content of your scanned QR codes, which never leave your device."
+        },
+        "technical": {
+            "title":"Technical info",
+            "sourceLinkText":"The source code for this page can be viewed here:",
+            "sourceLinkTitle":"QrBillReader on Github",
+            "attribution":"Some of the used technologies:",
+            "react":"React JS",
+            "qrReader":"QR Reader for React",
+            "coreui":"Core UI v4",
+            "dexie":"Dexie Database",
+            "i18next":"i18next Localization"
+        }
     }
 }
