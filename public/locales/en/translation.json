@@ -7,7 +7,11 @@
         "imprint":"Imprint"
     },
     "clearAll":{
-        "button":"Delete all"
+        "button":"Delete all",
+        "modalTitle":"Delete all?",
+        "modalBody":"Do you really want to delete all scanned bills?",
+        "cancel":"Cancel",
+        "confirm":"Delete"
     },
     "bill": {
         "table": {

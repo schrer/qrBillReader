@@ -6,19 +6,11 @@ import {
     CHeaderBrand,
     CHeaderNav,
     CNavLink,
-    CNavItem,
-    CButton,
+    CNavItem
 } from '@coreui/react';
-import CIcon from '@coreui/icons-react';
-import { cilTrash } from '@coreui/icons';
 import { useTranslation } from 'react-i18next';
-import { deleteAllR1Bills } from '../../util/storage';
+import DeleteAllBillsModal from '../billspage/DeleteAllBillsModal';
 
-async function deleteAllQrBills(){
-    await deleteAllR1Bills()
-    .then(() => console.log(`Deleted all bills from the database.`))
-    .catch(error => console.error(`Failed to clear QRBill table : ${error}`));
-}
 
 const AppHeader = () => {
 
@@ -30,7 +22,7 @@ const AppHeader = () => {
                 <CHeaderBrand className="mx-auto d-md-none" to="/">Header</CHeaderBrand>
                 <CHeaderNav className="d-none d-md-flex me-auto">
                     <CNavItem>
-                        <CNavLink to="/" component={NavLink} activeClassName="active">
+                        <CNavLink to="/" component={NavLink} activeclassname="active">
                             {translate('header.home')}
                         </CNavLink>
                     </CNavItem>
@@ -42,10 +34,7 @@ const AppHeader = () => {
                 </CHeaderNav>
                 <CHeaderNav>
                     <CNavItem>
-                        <CButton color="dark" variant="outline" onClick={() => deleteAllQrBills()}>
-                        {translate('clearAll.button')}&nbsp;
-                            <CIcon icon={cilTrash} size="lg"/>
-                        </CButton>
+                        <DeleteAllBillsModal />
                     </CNavItem>
                 </CHeaderNav>
             </CContainer>
