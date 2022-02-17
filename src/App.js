@@ -14,7 +14,9 @@ const loading = (
 const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
 
 // pages
-const Page404 = React.lazy(() => import('./views/pages/page404'))
+const Page404 = React.lazy(() => import('./views/pages/Page404'));
+const PageImprint = React.lazy(() => import('./views/pages/PageImprint'));
+const PageAbout = React.lazy(() => import('./views/pages/PageAbout'));
 
 export default function App() {
     return (
@@ -23,8 +25,8 @@ export default function App() {
                 <Suspense fallback={loading}>
                     <Routes>
                         <Route path="/*" element={<DefaultLayout />} />
-                        <Route path="/impressum" element="" />
-                        <Route path="/about" element="" />
+                        <Route path="/impressum" element={<PageImprint />} />
+                        <Route path="/about" element={<PageAbout />} />
                         <Route path="/404" element={<Page404 />} />
                     </Routes>
                 </Suspense>
