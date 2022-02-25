@@ -1,10 +1,11 @@
+// @flow
 import moment from 'moment';
 import {Amount, R1BillContent, R1TrustedSupplier} from './bill-datatypes';
 
 export class QrParserResult{
-    parsed;
-    rawContent;
-    parsedContent;
+    parsed/*: boolean*/;
+    rawContent/*:string */;
+    parsedContent/*: R1BillContent*/;
 }
 
 export const R1TaxRates = {
@@ -15,7 +16,7 @@ export const R1TaxRates = {
     Rate0: 0
 }
 
-export function parse(qrContent) {
+export function parse(qrContent /*: string */) /*: QrParserResult*/{
     let result = new QrParserResult();
     result.parsed = false;
     result.rawContent = qrContent;
@@ -55,7 +56,7 @@ function parseAlgoR1(content){
     return r1Result;
 }
 
-function checkAlgoR1(content){
+function checkAlgoR1(content /*: string*/) {
     let fields = splitR1String(content);
 
     if (fields.length !== 13){
