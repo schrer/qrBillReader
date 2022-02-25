@@ -24,7 +24,8 @@ const BillTable = (props) => {
                     <CTableBody>
                         <BillTableRow title={translate('bill.table.billNumber')} content={bill.billNumber}/>
                         <BillTableRow title={translate('bill.table.date')} content={bill.date.format('DD.MM.YYYY, kk:mm:ss')}/>
-                        <BillTableRow title={translate('bill.table.grossamount.full')} content={bill.grossAmount ? Number(bill.grossAmount).toFixed(2) : 0}/>
+                        <BillTableRow title={translate('bill.table.netamount.full')} content={Number(bill.netAmount).toFixed(2)}/>
+                        <BillTableRow title={translate('bill.table.grossamount.full')} content={Number(bill.grossAmount).toFixed(2)}/>
                         {gross20p > 0 &&
                             <BillTableRow title={translate('bill.table.grossamount.20percent')} content={gross20p.toFixed(2)}/>
                         }
@@ -40,7 +41,6 @@ const BillTable = (props) => {
                         {gross0p > 0 &&
                             <BillTableRow title={translate('bill.table.grossamount.0percent')} content={gross0p.toFixed(2)}/>
                         }
-                        <BillTableRow title={translate('bill.table.netamount.full')} content={Number(bill.netAmount).toFixed(2)}/>
                     </CTableBody>
                 </CTable>
             </CRow>
