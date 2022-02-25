@@ -72,5 +72,13 @@
             "dexie":"Dexie Database",
             "i18next":"i18next Localization"
         }
+    },
+    "page":{
+        "title":{
+            "main":"QR-Rechnungsscanner",
+            "imprint":"Impressum",
+            "about":"Über"
+        },
+        "description":"Scanne QR-Codes auf Rechnungen von österreichischen Registrierkassen"
     }
 }

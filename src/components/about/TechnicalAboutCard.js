@@ -10,7 +10,7 @@ const TechnicalAboutCard = (props) => {
                 <CCardBody>
                     <CCardTitle>{translation('about.technical.title')}</CCardTitle>
                     <CCardText>{translation('about.technical.sourceLinkText')} <CLink href="https://github.com/schrer/qrBillReader">{translation('about.technical.sourceLinkTitle')}</CLink></CCardText>
-                    <CCardText style={{"white-space": "pre-line"}}>{translation('about.technical.attribution')}</CCardText>
+                    <CCardText style={{"whiteSpace": "pre-line"}}>{translation('about.technical.attribution')}</CCardText>
                     <CListGroup>
                         <CListGroupItem>
                             <CCardText>

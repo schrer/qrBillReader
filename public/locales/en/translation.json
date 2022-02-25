@@ -72,5 +72,13 @@
             "dexie":"Dexie Database",
             "i18next":"i18next Localization"
         }
+    },
+    "page":{
+        "title":{
+            "main":"QR bill scanner",
+            "imprint":"Imprint",
+            "about":"About"
+        },
+        "description":"Scan your QR code bills from austrian cash registers"
     }
 }

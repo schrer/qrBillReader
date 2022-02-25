@@ -14,7 +14,7 @@ const AboutCard = (props) => {
             <CCard>
                 <CCardBody>
                     <CCardTitle>{translation(tlKeyPrefix + '.title')}</CCardTitle>
-                    <CCardText style={{"white-space": "pre-line"}}>{translation(tlKeyPrefix + '.content')}</CCardText>
+                    <CCardText style={{"whiteSpace": "pre-line"}}>{translation(tlKeyPrefix + '.content')}</CCardText>
                 </CCardBody>
             </CCard>
         </CRow>
