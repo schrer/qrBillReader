@@ -27,8 +27,13 @@ const AppHeader = (props) => {
             <CContainer fluid>
                 <CHeaderNav>
                     <CNavItem className='d-none d-lg-block'>
-                        <CNavLink to="/" component={NavLink} activeclassname="active">
+                        <CNavLink to="/" component={NavLink}>
                             {translate('header.home')}
+                        </CNavLink>
+                    </CNavItem>
+                    <CNavItem className='d-none d-lg-block'>
+                        <CNavLink to="/settings" component={NavLink}>
+                            {translate('header.settings')}
                         </CNavLink>
                     </CNavItem>
                     <CNavItem className='d-none d-lg-block'>
@@ -41,6 +46,7 @@ const AppHeader = (props) => {
                             <CDropdownToggle color="secondary">{getCurrentPageName(translate, location)}</CDropdownToggle>
                             <CDropdownMenu>
                                 <CDropdownItem component={NavLink} to="/">{translate('header.home')}</CDropdownItem>
+                                <CDropdownItem component={NavLink} to="/settings">{translate('header.settings')}</CDropdownItem>
                                 <CDropdownItem component={NavLink} to="/about">{translate('header.about')}</CDropdownItem>
                             </CDropdownMenu>
                         </CDropdown>
@@ -61,6 +67,9 @@ const AppHeader = (props) => {
 function getCurrentPageName(translate, location){
     if (location.pathname === '/about') {
         return translate('header.about');
+    }
+    if (location.pathname === '/settings') {
+        return translate('header.settings');
     }
     return translate('header.home')
 }

@@ -15,6 +15,7 @@ const loading = (
 const PageBillReader = React.lazy(() => import('./views/pages/PageBillReader'));
 const PageImprint = React.lazy(() => import('./views/pages/PageImprint'));
 const PageAbout = React.lazy(() => import('./views/pages/PageAbout'));
+const PageSettings = React.lazy(() => import('./views/pages/PageSettings'));
 const Page404 = React.lazy(() => import('./views/pages/Page404'));
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
                         <Route path="/*" element={<PageBillReader />} />
                         <Route path="/impressum" element={<PageImprint />} />
                         <Route path="/about" element={<PageAbout />} />
+                        <Route path="/settings" element={<PageSettings />} />
                         <Route path="/404" element={<Page404 />} />
                     </Routes>
                 </Suspense>

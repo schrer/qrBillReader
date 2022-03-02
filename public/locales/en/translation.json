@@ -1,7 +1,8 @@
 {
     "header": {
         "home":"QR bill",
-        "about":"About this page"
+        "about":"About this page",
+        "settings": "Settings"
     },
     "footer": {
         "imprint":"Imprint"

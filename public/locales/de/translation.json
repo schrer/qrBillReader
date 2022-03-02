@@ -1,7 +1,8 @@
 {
     "header": {
         "home":"QR Rechnung",
-        "about":"Über diese Seite"
+        "about":"Über diese Seite",
+        "settings": "Einstellungen"
     },
     "footer": {
         "imprint":"Impressum"
