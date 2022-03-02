@@ -7,6 +7,7 @@ export class BillContent {
     amounts /*: Array<Amount>*/;
     billNumber /*: string*/;
     dateMs/*: number*/;
+    cancellation/*: boolean*/;
 
     get date() /*: moment.Moment*/{
         return moment(this.dateMs);
