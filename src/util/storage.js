@@ -3,8 +3,8 @@ import { Amount, R1BillContent } from './bill-datatypes';
 
 const db = new Dexie('qrDatabase');
 
-db.version(11).stores({
-    r1Bills: '++id,algorithm,amounts,&billNumber,dateMs,registerNumberR1,encryptedRevenueCounterR1,certSerialR1,billSignatureR1,previousBillSignatureR1'
+db.version(12).stores({
+    r1Bills: '++id,algorithm,amounts,&billNumber,dateMs,registerNumberR1,encryptedRevenueCounterR1,certSerialR1,billSignatureR1,previousBillSignatureR1, cancellation'
 });
 
 db.r1Bills.mapToClass(R1BillContent);

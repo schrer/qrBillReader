@@ -52,14 +52,15 @@ function parseAlgoR1(content){
     r1Result.certSerialR1 = fields[10];
     r1Result.billSignatureR1 = fields[11];
     r1Result.previousBillSignatureR1 = fields[12];
-    r1Result.cancellation = isStorno(fields);
+    r1Result.cancellation = isCancellationBill(r1Result.amounts);
 
     return r1Result;
 }
 
-function isStorno(fields /*: Array<string>*/){
-    // TODO check if storno or not
-    return false;
+function isCancellationBill(amounts /*: Array<Amount>*/){
+    const someAboveZero = amounts.some((amount) => amount.fullAmount > 0);
+    const someBelowZero = amounts.some((amount) => amount.fullAmount < 0);
+    return someBelowZero && !someAboveZero;
 }
 
 function checkAlgoR1(content /*: string*/) {
