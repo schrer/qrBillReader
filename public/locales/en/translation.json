@@ -30,7 +30,10 @@
             },
             "netamount": {
                 "full": "Net price"
-            }
+            },
+            "cashRegisterID":"Cash register ID",
+            "trustedSupplier":"Trusted supplier",
+            "company":"Company"
         },
         "delete": {
             "buttonDelete": "Delete",
@@ -61,7 +64,7 @@
         },
         "privacy":{
             "title":"Privacy",
-            "content":"There is no active trackign on this page. Google Analytics or similar products are not used on this page. That is why no cookie banner is displayed to accept tracking.\nThe only data saved is the content of your scanned QR codes, which never leave your device."
+            "content":"There is no active tracking on this page. Google Analytics or similar products are not used on this page. That is why no cookie banner is displayed to accept tracking.\nThe only data saved is the content of your scanned QR codes, which never leave your device."
         },
         "technical": {
             "title":"Technical info",
@@ -80,7 +83,8 @@
             "title":"Bill information",
             "showIndividualAmounts":"Show individual amounts",
             "showTrustedServiceProvider":"Show trusted service providers",
-            "showCashRegisterNumber":"Show cash register ID"
+            "showCashRegisterNumber":"Show cash register ID",
+            "showNetAmount":"Show net price"
         }
     },
     "page":{

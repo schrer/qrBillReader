@@ -30,7 +30,10 @@
             },
             "netamount": {
                 "full": "Nettopreis"
-            }
+            },
+            "cashRegisterID":"Kassennummer",
+            "trustedSupplier":"Vertrauensdienstanbieter",
+            "company":"Händler"
         },
         "delete": {
             "buttonDelete": "Löschen",
@@ -80,7 +83,8 @@
             "title":"Rechnungsinfos",
             "showIndividualAmounts":"Zeige Einzelwerte",
             "showTrustedServiceProvider":"Zeige Vertrauensdienstanbieter",
-            "showCashRegisterNumber":"Zeige Kassennummer"
+            "showCashRegisterNumber":"Zeige Kassennummer",
+            "showNetAmount":"Zeige Nettopreis"
         }
     },
     "page":{

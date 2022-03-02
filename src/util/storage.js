@@ -1,10 +1,10 @@
 import Dexie from 'dexie';
-import { Amount, R1BillContent } from './bill-datatypes';
+import { Amount, R1BillContent, R1TrustedSupplier } from './bill-datatypes';
 
 const db = new Dexie('qrDatabase');
 
-db.version(12).stores({
-    r1Bills: '++id,algorithm,amounts,&billNumber,dateMs,registerNumberR1,encryptedRevenueCounterR1,certSerialR1,billSignatureR1,previousBillSignatureR1, cancellation'
+db.version(13).stores({
+    r1Bills: '++id,algorithm,amounts,&billNumber,dateMs,registerNumberR1,encryptedRevenueCounterR1,certSerialR1,billSignatureR1,previousBillSignatureR1,cancellation,supplierR1'
 });
 
 db.r1Bills.mapToClass(R1BillContent);
@@ -19,6 +19,7 @@ export async function readR1Bills(){
         .then(result => {
             result.forEach( bill => {
                 bill.amounts = bulkConvertDbAmountToAmountInstance(bill.amounts);
+                bill.supplierR1 = new R1TrustedSupplier(bill.supplierR1.short);
             });
             return result;
         });
