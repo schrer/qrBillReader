@@ -75,10 +75,19 @@
             "i18next":"i18next Localization"
         }
     },
+    "settings": {
+        "billinfo": {
+            "title":"Rechnungsinfos",
+            "showIndividualAmounts":"Zeige Einzelwerte",
+            "showTrustedServiceProvider":"Zeige Vertrauensdienstanbieter",
+            "showCashRegisterNumber":"Zeige Kassennummer"
+        }
+    },
     "page":{
         "title":{
             "main":"QR-Rechnungsscanner",
             "imprint":"Impressum",
+            "settings":"Einstellungen",
             "about":"Über"
         },
         "description":"Scanne QR-Codes auf Rechnungen von österreichischen Registrierkassen"

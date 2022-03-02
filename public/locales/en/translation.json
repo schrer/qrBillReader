@@ -75,10 +75,19 @@
             "i18next":"i18next Localization"
         }
     },
+    "settings": {
+        "billinfo": {
+            "title":"Bill information",
+            "showIndividualAmounts":"Show individual amounts",
+            "showTrustedServiceProvider":"Show trusted service providers",
+            "showCashRegisterNumber":"Show cash register ID"
+        }
+    },
     "page":{
         "title":{
             "main":"QR bill scanner",
             "imprint":"Imprint",
+            "settings":"Settings",
             "about":"About"
         },
         "description":"Scan your QR code bills from austrian cash registers"

@@ -4,7 +4,7 @@ import { SettingsContent, AppFooter, AppHeader } from '../../components';
 
 const PageSettings = () => {
     const translate = useTranslation().t;
-    document.title = translate('page.title.main');
+    document.title = translate('page.title.settings');
 
     return (
         <div className="wrapper d-flex flex-column min-vh-100 bg-light">
