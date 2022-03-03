@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { CCard, CCardBody, CCardText, CCardTitle, CContainer, CFormSwitch, CListGroup, CRow, CSpinner } from '@coreui/react';
+import { CCard, CCardBody, CCardText, CCardTitle, CContainer, CListGroup, CRow, CSpinner } from '@coreui/react';
 import { useTranslation } from 'react-i18next';
 import { useUserSettings, writeSwitchUserSetting } from '../util/userSettingsStorage'
 import SettingsSwitch from './settings/SettingsSwitch';
