@@ -33,7 +33,7 @@ const AppHeader = (props) => {
         <CHeader position="sticky" className="mb-4">
             <CRow className='flex-fill justify-content-center' >
                 <CCollapse className="header-collapse" visible={visible} fluid>
-                    {navLinks?.filter(link => location !== link.to).map(link => 
+                    {navLinks?.filter(link => location !== link.to).map(link =>
                         <CRow>
                             <CNavItem className='d-flex justify-content-center align-items-center'>
                                 <CButton variant='ghost' color='dark' size='lg' component={NavLink} to={link.to}>{link.text}</CButton>
@@ -46,8 +46,7 @@ const AppHeader = (props) => {
                 <CNavbar>
                     <CHeaderNav>
                         <CHeaderToggler className='d-lg-none' onClick={() => setVisible(!visible)}>
-                            <CIcon size='lg' icon={cilHamburgerMenu}/>&nbsp;
-                            {}
+                            <CIcon size='lg' icon={cilHamburgerMenu} />&nbsp;
                             {getCurrentPageName(location, navLinks)}
                         </CHeaderToggler>
                         {navLinks?.map(link =>
@@ -61,10 +60,10 @@ const AppHeader = (props) => {
                     </CHeaderNav>
                 </CNavbar>
                 {props.showDeleteAll &&
-                        <div class="end-0">
-                            <DeleteAllBillsModal />
-                        </div>
-                    }
+                    <div class="end-0">
+                        <DeleteAllBillsModal />
+                    </div>
+                }
             </CContainer>
         </CHeader>
     )
