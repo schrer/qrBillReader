@@ -16,16 +16,16 @@ const SettingsContent = () => {
                         <CCardBody>
                             <CCardTitle>{translate('settings.billinfo.title')}</CCardTitle>
                             <CCardText>
-                                <CFormSwitch label={translate('settings.billinfo.showIndividualAmounts')} 
+                                <CFormSwitch id="billInfoShowIndividualAmounts" label={translate('settings.billinfo.showIndividualAmounts')} 
                                     defaultChecked={userSettings.showIndividualAmounts} 
                                     onChange={() => writeSwitchUserSetting(userSettings, 'showIndividualAmounts')}/>
-                                <CFormSwitch label={translate('settings.billinfo.showTrustedServiceProvider')} 
+                                <CFormSwitch id="billInfoShowTrustedServiceProvider" label={translate('settings.billinfo.showTrustedServiceProvider')} 
                                     defaultChecked={userSettings.showTrustedServiceProvider}
                                     onChange={() => writeSwitchUserSetting(userSettings, 'showTrustedServiceProvider')}/>
-                                <CFormSwitch label={translate('settings.billinfo.showCashRegisterNumber')} 
+                                <CFormSwitch id="billInfoShowCashRegisterNumber" label={translate('settings.billinfo.showCashRegisterNumber')} 
                                     defaultChecked={userSettings.showCashRegisterNumber}
                                     onChange={() => writeSwitchUserSetting(userSettings, 'showCashRegisterNumber')}/>
-                                <CFormSwitch label={translate('settings.billinfo.showNetAmount')} 
+                                <CFormSwitch id="billInfoShowNetAmount" label={translate('settings.billinfo.showNetAmount')} 
                                     defaultChecked={userSettings.showNetAmount}
                                     onChange={() => writeSwitchUserSetting(userSettings, 'showNetAmount')}/>
                             </CCardText>
