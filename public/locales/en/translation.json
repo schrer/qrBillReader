@@ -2,7 +2,8 @@
     "header": {
         "home":"QR bill",
         "about":"About this page",
-        "settings": "Settings"
+        "settings": "Settings",
+        "login": "Login"
     },
     "footer": {
         "imprint":"Imprint"
@@ -87,12 +88,18 @@
             "showNetAmount":"Show net price"
         }
     },
+    "login": {
+        "email":"E-Mail",
+        "password":"Password",
+        "submit":"Login"
+    },
     "page":{
         "title":{
             "main":"QR bill scanner",
             "imprint":"Imprint",
             "settings":"Settings",
-            "about":"About"
+            "about":"About",
+            "login":"Login"
         },
         "description":"Scan your QR code bills from austrian cash registers"
     }

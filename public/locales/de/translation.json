@@ -2,7 +2,8 @@
     "header": {
         "home":"QR Rechnung",
         "about":"Über diese Seite",
-        "settings": "Einstellungen"
+        "settings": "Einstellungen",
+        "login": "Anmeldung"
     },
     "footer": {
         "imprint":"Impressum"
@@ -87,12 +88,18 @@
             "showNetAmount":"Zeige Nettopreis"
         }
     },
+    "login": {
+        "email":"E-Mail",
+        "password":"Passwort",
+        "submit":"Anmelden"
+    },
     "page":{
         "title":{
             "main":"QR-Rechnungsscanner",
             "imprint":"Impressum",
             "settings":"Einstellungen",
-            "about":"Über"
+            "about":"Über",
+            "login":"Anmeldung"
         },
         "description":"Scanne QR-Codes auf Rechnungen von österreichischen Registrierkassen"
     }

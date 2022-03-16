@@ -28,6 +28,7 @@ const AppHeader = (props) => {
     navLinks.push({ to: "/", text: translate('header.home') });
     navLinks.push({ to: "/settings", text: translate('header.settings') });
     navLinks.push({ to: "/about", text: translate('header.about') });
+    navLinks.push({ to: "/login", text: translate('header.login') });
 
     return (
         <CHeader position="sticky" className="mb-4">
