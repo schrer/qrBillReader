@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { R1TaxRates } from '../../util/bill-parser';
 import BillTableRow from './BillTableRow';
 import { useUserSettings } from '../../util/userSettingsStorage';
+import { matchCompanyByCertSerial } from '../../util/company-matcher'
 
 
 const BillTable = (props) => {
@@ -18,6 +19,8 @@ const BillTable = (props) => {
     const gross13p = amounts?.find(amount => amount?.taxPercentage === R1TaxRates.Rate13)?.fullAmount;
     const gross10p = amounts?.find(amount => amount?.taxPercentage === R1TaxRates.Rate10)?.fullAmount;
     const gross0p = amounts?.find(amount => amount?.taxPercentage === R1TaxRates.Rate0)?.fullAmount;
+
+    const sellerName = matchCompanyByCertSerial(bill.certSerialR1);
 
     const showGross20p = userSettings.showIndividualAmounts && gross20p > 0;
     const showGross10p = userSettings.showIndividualAmounts && gross10p > 0;
@@ -34,6 +37,9 @@ const BillTable = (props) => {
             <CRow>
                 <CTable hover>
                     <CTableBody>
+                        {sellerName && 
+                            <BillTableRow title={translate('bill.table.company')} content={sellerName}/>
+                        }
                         <BillTableRow title={translate('bill.table.billNumber')} content={bill.billNumber}/>
                         <BillTableRow title={translate('bill.table.date')} content={bill.date.format('DD.MM.YYYY, kk:mm:ss')}/>
                         {showNetPrice && 

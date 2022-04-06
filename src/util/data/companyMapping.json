@@ -1,0 +1,19 @@
+{
+    "uidMap":{    
+        "ATU19417101":"Media Saturn",
+        "ATU24963706":"Hofer KG",
+        "ATU42620008":"McDonalds Austria",
+        "ATU59193205":"Rewe International"
+    },
+    "serialMap":{
+        "761EF806":"Leberkas-Pepi",
+        "4355E3F1":"Leberkas-Pepi",
+        "01481d93b9597c":"Lidl",
+        "2b7da6b409d5":"Hornbach",
+        "1b017d82":"Müller Handels GmbH",
+        "1c7b398bfdab4":"Le Crobag Österreich",
+        "20c09399862f6ae3":"Haus des Meeres Wien",
+        "71d5f74c":"Ebi Vienna",
+        "2A38C2E5":"Weltmuseum Wien"
+    }
+}
