@@ -2,7 +2,8 @@
     "uidMap":{    
         "ATU19417101":"Media Saturn",
         "ATU24963706":"Hofer KG",
-        "ATU42620008":"McDonalds Austria",
+        "ATU42620008":"McDonald's, Eckwolf GmbH",
+        "ATU36975500":"McDonald's Franchise GmbH",
         "ATU59193205":"Rewe International"
     },
     "serialMap":{
@@ -14,6 +15,12 @@
         "1c7b398bfdab4":"Le Crobag Österreich",
         "20c09399862f6ae3":"Haus des Meeres Wien",
         "71d5f74c":"Ebi Vienna",
-        "2A38C2E5":"Weltmuseum Wien"
+        "2A38C2E5":"Weltmuseum Wien",
+        "54149bce":"Pizza Favori GmbH",
+        "4e73db60":"Kleider Bauer",
+        "7ec556d4":"Valora Retail Austria",
+        "209C31AA":"SSP Österreich GmbH",
+        "1eda56d2":"OBI GmbH",
+        "208D115D":"OMV Downstream GmbH"
     }
 }
