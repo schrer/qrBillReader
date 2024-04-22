@@ -18,7 +18,7 @@
         "table": {
             "label": "Name",
             "value": "Wert",
-            "billNumber": "Rechnugsnummer",
+            "billNumber": "Rechnungsnummer",
             "date": "Datum",
             "grossamount": {
                 "20percent": "Brutto USt. 20%",

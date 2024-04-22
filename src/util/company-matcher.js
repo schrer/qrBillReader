@@ -1,16 +1,8 @@
-import companyMappings from './data/companyMapping.json';
+import BackendClient from './qrBackendClient';
 
-const uidMapping = companyMappings.uidMap;
-const serialMapping = companyMappings.serialMap
+const apiURL = "http://localhost:8080/api/";
+const apiClient = new BackendClient(apiURL);
 
-export function matchCompanyByCertSerial(certSerial /*: string*/){
-    
-    const uidRegExp = new RegExp("^U:ATU\\d{8}-\\d+$","i");
-
-    if (uidRegExp.test(certSerial)) {
-        const uid = certSerial.slice(2,13);
-        return uidMapping[uid];
-    }
-
-    return serialMapping[certSerial];
+export async function matchCompanyByCertSerial(certSerial /*: string*/){
+    return apiClient.matchCompanyByQrCertSerial(certSerial).then(data => {return data.companyName});
 }
