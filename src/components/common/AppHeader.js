@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import {
     CContainer,
     CHeader,
@@ -14,7 +14,6 @@ import {
 } from '@coreui/react';
 import { useTranslation } from 'react-i18next';
 import DeleteAllBillsModal from '../billspage/DeleteAllBillsModal';
-import { useLocation } from 'react-router-dom';
 import { cilHamburgerMenu } from "@coreui/icons";
 import CIcon from '@coreui/icons-react';
 
@@ -25,18 +24,18 @@ const AppHeader = (props) => {
     const location = useLocation().pathname;
     const navLinks = [];
 
-    navLinks.push({ to: "/", text: translate('header.home') });
-    navLinks.push({ to: "/settings", text: translate('header.settings') });
-    navLinks.push({ to: "/about", text: translate('header.about') });
+    navLinks.push({ key: "home", to: "/", text: translate('header.home') });
+    navLinks.push({ key: "about", to: "/settings", text: translate('header.settings') });
+    navLinks.push({ key: "settings", to: "/about", text: translate('header.about') });
 
     return (
         <CHeader position="sticky" className="mb-4">
             <CRow className='flex-fill justify-content-center' >
-                <CCollapse className="header-collapse" visible={visible} fluid>
+                <CCollapse className="header-collapse" visible={visible}>
                     {navLinks?.map(link =>
-                        <CRow>
+                        <CRow key={link.key}>
                             <CNavItem className='d-flex justify-content-center align-items-center'>
-                                <CButton variant='ghost' color='dark' size='lg' component={NavLink} to={link.to}>{link.text}</CButton>
+                                <CButton variant='ghost' color='dark' size='lg' as={NavLink} to={link.to}>{link.text}</CButton>
                             </CNavItem>
                         </CRow>
                     )}
@@ -50,8 +49,8 @@ const AppHeader = (props) => {
                             {getCurrentPageName(location, navLinks)}
                         </CHeaderToggler>
                         {navLinks?.map(link =>
-                            <CNavItem className='d-none d-lg-block'>
-                                <CNavLink to={link.to} component={NavLink}>
+                            <CNavItem  key={link.key} className='d-none d-lg-block'>
+                                <CNavLink to={link.to} as={NavLink}>
                                     {link.text}
                                 </CNavLink>
                             </CNavItem>
@@ -60,7 +59,7 @@ const AppHeader = (props) => {
                     </CHeaderNav>
                 </CNavbar>
                 {props.showDeleteAll &&
-                    <div class="end-0">
+                    <div className="end-0">
                         <DeleteAllBillsModal />
                     </div>
                 }

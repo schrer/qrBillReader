@@ -22,22 +22,18 @@ export default function QrReaderComponent() {
   async function addQrBill (qrBill) {
     try {
       qrBill.date = qrBill.date.valueOf()
-      const id = await saveR1Bill(qrBill);
-
-      console.log(`Added bill ${qrBill.billNumber} with id ${id}`);
+      await saveR1Bill(qrBill);
     } catch (error) {
       console.error(`Failed to add ${qrBill.billNumber} : ${error}`);
     }
   }
 
-  return <>
-    <div>
+  return <div>
       <QrReader
         delay={200}
         onError={handleError}
         onScan={handleScan}
       />
     </div>
-  </>
 
 }

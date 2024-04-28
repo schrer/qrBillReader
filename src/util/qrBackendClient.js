@@ -1,7 +1,9 @@
 import {CompanyInfo} from './bill-datatypes';
+import config from './config';
 
 class BackendClient {
-    constructor(apiUrl /*: string*/) {
+    constructor(apiUrl /*: string*/, active /*: boolean*/ = true) {
+        this.active = active;
         if (!apiUrl.endsWith('/')) {
             apiUrl += '/';
         }
@@ -10,6 +12,9 @@ class BackendClient {
     }
 
     async matchCompanyByQrCertSerial(certSerial /*: string*/) /*: CompanyInfo*/ {
+        if (this.active === false) {
+            return null;
+        }
         try {
             const response = await fetch(this.companyEndpoint + certSerial);
             return await response.json().then(data => {return new CompanyInfo(data)});
@@ -18,6 +23,36 @@ class BackendClient {
             return null;
         }
     }
+
+    isActive() {
+        return this.active;
+    }
 }
 
-export default BackendClient;
+class NoOpClient {
+    async matchCompanyByQrCertSerial(certSerial /*: string*/) /*: CompanyInfo*/ {
+        return null;
+    }
+
+    isActive() {
+        return false;
+    }
+}
+
+function isBackendAlive() {
+    // TODO implement call to alive endpoint
+    return true;
+}
+
+function getBackendClient() {
+    if (config.api.active && isBackendAlive()) {
+        return new BackendClient(config.api.url);
+    } else {
+        console.debug('Backend not available. Using no-op client.');
+        return new NoOpClient();
+    }
+}
+
+const ApiClient = getBackendClient();
+
+export default ApiClient;
