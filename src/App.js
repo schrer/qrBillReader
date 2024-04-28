@@ -24,11 +24,12 @@ export default function App() {
             <BrowserRouter>
                 <Suspense fallback={loading}>
                     <Routes>
-                        <Route path="/*" element={<PageBillReader />} />
+                        <Route path="/" element={<PageBillReader />} />
                         <Route path="/impressum" element={<PageImprint />} />
                         <Route path="/about" element={<PageAbout />} />
                         <Route path="/settings" element={<PageSettings />} />
                         <Route path="/404" element={<Page404 />} />
+                        <Route path="*" element={<Page404 />} />
                     </Routes>
                 </Suspense>
             </BrowserRouter>
