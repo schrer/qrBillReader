@@ -9,6 +9,7 @@ class BackendClient {
         }
         this.apiURL = apiUrl;
         this.companyEndpoint = this.apiURL + "company/";
+        this.healthEndpoint = this.apiURL + "status/health";
     }
 
     async matchCompanyByQrCertSerial(certSerial /*: string*/) /*: CompanyInfo*/ {
@@ -39,16 +40,12 @@ class NoOpClient {
     }
 }
 
-function isBackendAlive() {
-    // TODO implement call to alive endpoint
-    return true;
-}
-
 function getBackendClient() {
-    if (config.api.active && isBackendAlive()) {
+    if (config.api.active) {
         return new BackendClient(config.api.url);
+        
     } else {
-        console.debug('Backend not available. Using no-op client.');
+        console.debug('Backend deativated. Using no-op client.');
         return new NoOpClient();
     }
 }

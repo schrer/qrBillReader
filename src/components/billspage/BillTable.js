@@ -34,7 +34,7 @@ const BillTable = (props) => {
     return (
         <CContainer>
             <CRow>
-                <CTable hover>
+                <CTable hover responsive>
                     <CTableBody>
                         {sellerName && 
                             <BillTableRow title={translate('bill.table.company')} content={sellerName}/>

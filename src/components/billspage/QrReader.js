@@ -30,7 +30,7 @@ export default function QrReaderComponent() {
 
   return <div>
       <QrReader
-        delay={200}
+        delay={800}
         onError={handleError}
         onScan={handleScan}
       />
