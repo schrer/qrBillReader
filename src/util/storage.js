@@ -1,5 +1,6 @@
 import Dexie from 'dexie';
 import { Amount, R1BillContent, R1TrustedSupplier } from './bill-datatypes';
+import { matchCompanyByCertSerial } from './company-matcher';
 
 const db = new Dexie('qrDatabase');
 
@@ -10,8 +11,29 @@ db.version(13).stores({
 db.r1Bills.mapToClass(R1BillContent);
 
 export async function saveR1Bill(r1Bill){
+    let thisBill = await db.r1Bills
+        .where('billNumber')
+        .equals(r1Bill.billNumber)
+        .first();
+    if (thisBill) {
+        return thisBill.id;
+    }
+
     let r1BillMapped = mapR1BillForDb(r1Bill);
-    return await db.r1Bills.add(r1BillMapped);
+
+    return db.r1Bills.add(r1BillMapped).then( billId => {
+        if (!r1BillMapped.companyName) {
+            r1BillMapped.id = billId;
+            matchCompanyByCertSerial(r1BillMapped.certSerialR1)
+            .then(companyName => {
+                if (companyName !== null) {
+                    r1BillMapped.companyName = companyName;
+                    db.r1Bills.put(r1BillMapped);
+                }
+            });
+        }
+        return billId;
+    });
 }
 
 export async function readR1Bills(){

@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { R1TaxRates } from '../../util/bill-parser';
 import BillTableRow from './BillTableRow';
 import { useUserSettings } from '../../util/userSettingsStorage';
-import { matchCompanyByCertSerial } from '../../util/company-matcher'
 
 
 const BillTable = (props) => {
@@ -12,7 +11,7 @@ const BillTable = (props) => {
     const translate = useTranslation().t;
     const [userSettings] = useUserSettings();
     const bill = props.bill;
-    const amounts = props.bill.amounts;
+    const amounts = bill.amounts;
 
     const gross20p = amounts?.find(amount => amount?.taxPercentage === R1TaxRates.Rate20)?.fullAmount;
     const gross19p = amounts?.find(amount => amount?.taxPercentage === R1TaxRates.Rate19)?.fullAmount;
@@ -20,7 +19,7 @@ const BillTable = (props) => {
     const gross10p = amounts?.find(amount => amount?.taxPercentage === R1TaxRates.Rate10)?.fullAmount;
     const gross0p = amounts?.find(amount => amount?.taxPercentage === R1TaxRates.Rate0)?.fullAmount;
 
-    const sellerName = matchCompanyByCertSerial(bill.certSerialR1);
+    const sellerName = bill.companyName;
 
     const showGross20p = userSettings.showIndividualAmounts && gross20p > 0;
     const showGross10p = userSettings.showIndividualAmounts && gross10p > 0;
@@ -32,10 +31,10 @@ const BillTable = (props) => {
     const showRegisterID = userSettings.showCashRegisterNumber;
     const showTrustedServiceProvider = userSettings.showTrustedServiceProvider;
 
-    return (        
+    return (
         <CContainer>
             <CRow>
-                <CTable hover>
+                <CTable hover responsive>
                     <CTableBody>
                         {sellerName && 
                             <BillTableRow title={translate('bill.table.company')} content={sellerName}/>

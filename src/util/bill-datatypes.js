@@ -8,6 +8,7 @@ export class BillContent {
     billNumber /*: string*/;
     dateMs/*: number*/;
     cancellation/*: boolean*/;
+    companyName/*: string*/;
 
     get date() /*: moment.Moment*/{
         return moment(this.dateMs);
@@ -95,5 +96,19 @@ export class R1TrustedSupplier {
             default:
                 return "Unknown vendor - " + this.short;
         }
+    }
+}
+
+export class CompanyInfo {
+    shopName /*: string */;
+    companyName /*: string */;
+    certId /*: string */;
+    uid /*: string */;
+
+    constructor(company) {
+        this.shopName = company.shopName;
+        this.companyName = company.companyName;
+        this.certId = company.certId;
+        this.uid = company.uid;
     }
 }
