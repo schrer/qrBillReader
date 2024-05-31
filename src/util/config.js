@@ -1,7 +1,7 @@
 const config = {
     "api": {
-        "url": "http://localhost:8080/api",
-        "active": false
+        "url": "https://qrrechnung.at/api",
+        "active": true
     }
 }
 
